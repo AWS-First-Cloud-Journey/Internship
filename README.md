@@ -90,12 +90,19 @@ git checkout -b intern/your-name
 # Tạo thư mục với tên của bạn
 mkdir submissions/your-name
 cd submissions/your-name
+```
 
-# Copy templates
+### Bước 4: Copy templates
+
+```bash
+mkdir worklog
+mkdir project-proposal
+mkdir blog-translation
 cp -r ../../templates/* .
 cp -r ../../worklog/template.md worklog/
 cp -r ../../project-proposal/template.md project-proposal/
 cp -r ../../blog-translation/template.md blog-translation/
+
 ```
 
 ### Bước 4: Bắt đầu thực hiện
