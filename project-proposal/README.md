@@ -338,32 +338,32 @@ Project Proposal là **deliverable quan trọng nhất** (50% tổng điểm) tr
 ## 📊 Evaluation Rubric
 
 ### Technical Excellence (40%)
-| Criteria | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|----------|-------------------|---------------|---------------------|------------------------|
-| **Architecture Design** | Innovative, scalable, secure | Well-designed, follows best practices | Functional, meets requirements | Basic, has significant gaps |
-| **AWS Services Selection** | Optimal choices, well-justified | Good choices, mostly appropriate | Adequate choices, some issues | Poor choices, not justified |
-| **Technical Depth** | Deep understanding evident | Good technical knowledge | Basic understanding | Superficial treatment |
+| Criteria                   | Excellent (90-100%)             | Good (80-89%)                         | Satisfactory (70-79%)          | Needs Improvement (<70%)    |
+| -------------------------- | ------------------------------- | ------------------------------------- | ------------------------------ | --------------------------- |
+| **Architecture Design**    | Innovative, scalable, secure    | Well-designed, follows best practices | Functional, meets requirements | Basic, has significant gaps |
+| **AWS Services Selection** | Optimal choices, well-justified | Good choices, mostly appropriate      | Adequate choices, some issues  | Poor choices, not justified |
+| **Technical Depth**        | Deep understanding evident      | Good technical knowledge              | Basic understanding            | Superficial treatment       |
 
 ### Business Viability (30%)
-| Criteria | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|----------|-------------------|---------------|---------------------|------------------------|
-| **Problem Definition** | Clear, compelling, well-researched | Well-defined, good research | Adequately defined | Vague, poorly researched |
-| **Business Case** | Strong ROI, compelling benefits | Good business case | Adequate justification | Weak business case |
-| **Market Understanding** | Deep market insight | Good market knowledge | Basic understanding | Limited market awareness |
+| Criteria                 | Excellent (90-100%)                | Good (80-89%)               | Satisfactory (70-79%)  | Needs Improvement (<70%) |
+| ------------------------ | ---------------------------------- | --------------------------- | ---------------------- | ------------------------ |
+| **Problem Definition**   | Clear, compelling, well-researched | Well-defined, good research | Adequately defined     | Vague, poorly researched |
+| **Business Case**        | Strong ROI, compelling benefits    | Good business case          | Adequate justification | Weak business case       |
+| **Market Understanding** | Deep market insight                | Good market knowledge       | Basic understanding    | Limited market awareness |
 
 ### Implementation Feasibility (20%)
-| Criteria | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|----------|-------------------|---------------|---------------------|------------------------|
-| **Timeline** | Realistic, well-planned | Mostly realistic | Somewhat optimistic | Unrealistic |
-| **Resource Planning** | Comprehensive, detailed | Well-planned | Basic planning | Poor planning |
-| **Risk Management** | Thorough risk analysis | Good risk identification | Basic risk assessment | Inadequate risk planning |
+| Criteria              | Excellent (90-100%)     | Good (80-89%)            | Satisfactory (70-79%) | Needs Improvement (<70%) |
+| --------------------- | ----------------------- | ------------------------ | --------------------- | ------------------------ |
+| **Timeline**          | Realistic, well-planned | Mostly realistic         | Somewhat optimistic   | Unrealistic              |
+| **Resource Planning** | Comprehensive, detailed | Well-planned             | Basic planning        | Poor planning            |
+| **Risk Management**   | Thorough risk analysis  | Good risk identification | Basic risk assessment | Inadequate risk planning |
 
 ### Presentation Quality (10%)
-| Criteria | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|----------|-------------------|---------------|---------------------|------------------------|
-| **Writing Quality** | Professional, clear, engaging | Well-written, clear | Adequate writing | Poor writing quality |
-| **Visual Design** | Professional diagrams, charts | Good visuals | Basic visuals | Poor or missing visuals |
-| **Organization** | Logical flow, easy to follow | Well-organized | Adequately organized | Poor organization |
+| Criteria            | Excellent (90-100%)           | Good (80-89%)       | Satisfactory (70-79%) | Needs Improvement (<70%) |
+| ------------------- | ----------------------------- | ------------------- | --------------------- | ------------------------ |
+| **Writing Quality** | Professional, clear, engaging | Well-written, clear | Adequate writing      | Poor writing quality     |
+| **Visual Design**   | Professional diagrams, charts | Good visuals        | Basic visuals         | Poor or missing visuals  |
+| **Organization**    | Logical flow, easy to follow  | Well-organized      | Adequately organized  | Poor organization        |
 
 ---
 
@@ -456,7 +456,3 @@ Project Proposal là **deliverable quan trọng nhất** (50% tổng điểm) tr
 ---
 
 **🎯 Remember**: Your proposal should demonstrate not just technical knowledge, but also business acumen và strategic thinking. This is your opportunity to showcase your potential as a future cloud architect và business consultant!
-
----
-
-*Hướng dẫn này sẽ giúp bạn tạo ra một project proposal chất lượng cao, thể hiện được khả năng technical và business analysis của một cloud professional.*
