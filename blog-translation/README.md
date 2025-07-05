@@ -189,12 +189,12 @@ Blog Translation là cơ hội để thực tập sinh:
 
 ## 📖 Glossary - Thuật ngữ
 
-| English | Tiếng Việt | Định nghĩa |
-|---------|------------|------------|
-| Auto Scaling | Tự động mở rộng quy mô | Khả năng tự động tăng/giảm resources dựa trên demand |
-| Load Balancer | Bộ cân bằng tải | Phân phối traffic đến multiple servers |
+| English       | Tiếng Việt              | Định nghĩa                                                  |
+| ------------- | ----------------------- | ----------------------------------------------------------- |
+| Auto Scaling  | Tự động mở rộng quy mô  | Khả năng tự động tăng/giảm resources dựa trên demand        |
+| Load Balancer | Bộ cân bằng tải         | Phân phối traffic đến multiple servers                      |
 | Microservices | Kiến trúc microservices | Architectural pattern chia application thành small services |
-| ... | ... | ... |
+| ...           | ...                     | ...                                                         |
 
 ## 🔗 Tài liệu tham khảo
 
@@ -249,53 +249,53 @@ Bài dịch này được thực hiện trong khuôn khổ **FCJ Internship Prog
 ## 🎯 Glossary thuật ngữ AWS phổ biến
 
 ### Core Services
-| English | Tiếng Việt | Notes |
-|---------|------------|-------|
-| **Compute Services** |
-| EC2 (Elastic Compute Cloud) | EC2 | Giữ nguyên tên service |
-| Lambda | Lambda | Giữ nguyên |
-| Auto Scaling | Tự động mở rộng quy mô | |
-| Load Balancer | Bộ cân bằng tải | |
-| **Storage Services** |
-| S3 (Simple Storage Service) | S3 | Giữ nguyên |
-| EBS (Elastic Block Store) | EBS | Giữ nguyên |
-| EFS (Elastic File System) | EFS | Giữ nguyên |
-| **Database Services** |
-| RDS (Relational Database Service) | RDS | Giữ nguyên |
-| DynamoDB | DynamoDB | Giữ nguyên |
-| ElastiCache | ElastiCache | Giữ nguyên |
-| **Networking** |
-| VPC (Virtual Private Cloud) | VPC / Đám mây riêng ảo | |
-| Subnet | Subnet / Mạng con | |
-| Internet Gateway | Internet Gateway | |
-| NAT Gateway | NAT Gateway | |
-| **Security** |
-| IAM (Identity and Access Management) | IAM | Giữ nguyên |
-| Security Group | Security Group / Nhóm bảo mật | |
-| NACL (Network Access Control List) | NACL | Giữ nguyên |
+| English                              | Tiếng Việt                    | Notes                  |
+| ------------------------------------ | ----------------------------- | ---------------------- |
+| **Compute Services**                 |
+| EC2 (Elastic Compute Cloud)          | EC2                           | Giữ nguyên tên service |
+| Lambda                               | Lambda                        | Giữ nguyên             |
+| Auto Scaling                         | Tự động mở rộng quy mô        |                        |
+| Load Balancer                        | Bộ cân bằng tải               |                        |
+| **Storage Services**                 |
+| S3 (Simple Storage Service)          | S3                            | Giữ nguyên             |
+| EBS (Elastic Block Store)            | EBS                           | Giữ nguyên             |
+| EFS (Elastic File System)            | EFS                           | Giữ nguyên             |
+| **Database Services**                |
+| RDS (Relational Database Service)    | RDS                           | Giữ nguyên             |
+| DynamoDB                             | DynamoDB                      | Giữ nguyên             |
+| ElastiCache                          | ElastiCache                   | Giữ nguyên             |
+| **Networking**                       |
+| VPC (Virtual Private Cloud)          | VPC / Đám mây riêng ảo        |                        |
+| Subnet                               | Subnet / Mạng con             |                        |
+| Internet Gateway                     | Internet Gateway              |                        |
+| NAT Gateway                          | NAT Gateway                   |                        |
+| **Security**                         |
+| IAM (Identity and Access Management) | IAM                           | Giữ nguyên             |
+| Security Group                       | Security Group / Nhóm bảo mật |                        |
+| NACL (Network Access Control List)   | NACL                          | Giữ nguyên             |
 
 ### Architecture Concepts
-| English | Tiếng Việt | Notes |
-|---------|------------|-------|
-| Microservices | Kiến trúc microservices | |
-| Serverless | Serverless | Giữ nguyên |
-| Container | Container | Đã được Việt hóa |
-| Orchestration | Điều phối | |
-| High Availability | Tính khả dụng cao | |
-| Fault Tolerance | Khả năng chịu lỗi | |
-| Scalability | Khả năng mở rộng | |
-| Elasticity | Tính đàn hồi | |
+| English           | Tiếng Việt              | Notes            |
+| ----------------- | ----------------------- | ---------------- |
+| Microservices     | Kiến trúc microservices |                  |
+| Serverless        | Serverless              | Giữ nguyên       |
+| Container         | Container               | Đã được Việt hóa |
+| Orchestration     | Điều phối               |                  |
+| High Availability | Tính khả dụng cao       |                  |
+| Fault Tolerance   | Khả năng chịu lỗi       |                  |
+| Scalability       | Khả năng mở rộng        |                  |
+| Elasticity        | Tính đàn hồi            |                  |
 
 ### DevOps Terms
-| English | Tiếng Việt | Notes |
-|---------|------------|-------|
-| CI/CD | CI/CD | Giữ nguyên |
-| Pipeline | Pipeline / Quy trình | |
-| Deployment | Triển khai | |
-| Infrastructure as Code | Hạ tầng dưới dạng mã | |
-| Monitoring | Giám sát | |
-| Logging | Ghi log | |
-| Alerting | Cảnh báo | |
+| English                | Tiếng Việt           | Notes      |
+| ---------------------- | -------------------- | ---------- |
+| CI/CD                  | CI/CD                | Giữ nguyên |
+| Pipeline               | Pipeline / Quy trình |            |
+| Deployment             | Triển khai           |            |
+| Infrastructure as Code | Hạ tầng dưới dạng mã |            |
+| Monitoring             | Giám sát             |            |
+| Logging                | Ghi log              |            |
+| Alerting               | Cảnh báo             |            |
 
 ---
 
@@ -334,25 +334,25 @@ Bài dịch này được thực hiện trong khuôn khổ **FCJ Internship Prog
 ## 📊 Evaluation Criteria
 
 ### Translation Quality (60%)
-| Aspect | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|--------|-------------------|---------------|---------------------|------------------------|
-| **Accuracy** | Perfect technical accuracy | Minor inaccuracies | Some technical errors | Significant errors |
-| **Fluency** | Natural Vietnamese | Mostly natural | Somewhat awkward | Machine-like translation |
-| **Completeness** | 100% translated | 95%+ translated | 90%+ translated | Significant omissions |
+| Aspect           | Excellent (90-100%)        | Good (80-89%)      | Satisfactory (70-79%) | Needs Improvement (<70%) |
+| ---------------- | -------------------------- | ------------------ | --------------------- | ------------------------ |
+| **Accuracy**     | Perfect technical accuracy | Minor inaccuracies | Some technical errors | Significant errors       |
+| **Fluency**      | Natural Vietnamese         | Mostly natural     | Somewhat awkward      | Machine-like translation |
+| **Completeness** | 100% translated            | 95%+ translated    | 90%+ translated       | Significant omissions    |
 
 ### Technical Understanding (25%)
-| Aspect | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|--------|-------------------|---------------|---------------------|------------------------|
-| **Concept Grasp** | Deep understanding | Good understanding | Basic understanding | Poor understanding |
-| **Terminology** | Perfect usage | Mostly correct | Some inconsistencies | Poor terminology |
-| **Context** | Excellent adaptation | Good localization | Basic adaptation | Poor context handling |
+| Aspect            | Excellent (90-100%)  | Good (80-89%)      | Satisfactory (70-79%) | Needs Improvement (<70%) |
+| ----------------- | -------------------- | ------------------ | --------------------- | ------------------------ |
+| **Concept Grasp** | Deep understanding   | Good understanding | Basic understanding   | Poor understanding       |
+| **Terminology**   | Perfect usage        | Mostly correct     | Some inconsistencies  | Poor terminology         |
+| **Context**       | Excellent adaptation | Good localization  | Basic adaptation      | Poor context handling    |
 
 ### Presentation (15%)
-| Aspect | Excellent (90-100%) | Good (80-89%) | Satisfactory (70-79%) | Needs Improvement (<70%) |
-|--------|-------------------|---------------|---------------------|------------------------|
-| **Format** | Perfect preservation | Minor format issues | Some format problems | Poor formatting |
-| **Organization** | Excellent structure | Good organization | Adequate structure | Poor organization |
-| **Visuals** | All images perfect | Most images good | Some image issues | Poor image handling |
+| Aspect           | Excellent (90-100%)  | Good (80-89%)       | Satisfactory (70-79%) | Needs Improvement (<70%) |
+| ---------------- | -------------------- | ------------------- | --------------------- | ------------------------ |
+| **Format**       | Perfect preservation | Minor format issues | Some format problems  | Poor formatting          |
+| **Organization** | Excellent structure  | Good organization   | Adequate structure    | Poor organization        |
+| **Visuals**      | All images perfect   | Most images good    | Some image issues     | Poor image handling      |
 
 ---
 
@@ -422,7 +422,3 @@ Bài dịch này được thực hiện trong khuôn khổ **FCJ Internship Prog
 ---
 
 **🎯 Remember**: Great translation is not just about language conversion - it's about knowledge transfer và community building. Your work helps Vietnamese developers access world-class AWS content!
-
----
-
-*Hướng dẫn này sẽ giúp bạn tạo ra những bài dịch chất lượng cao, đóng góp có ý nghĩa cho cộng đồng AWS Việt Nam.*

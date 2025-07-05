@@ -90,15 +90,22 @@ git checkout -b intern/your-name
 # Tạo thư mục với tên của bạn
 mkdir submissions/your-name
 cd submissions/your-name
+```
 
-# Copy templates
+### Bước 4: Copy templates
+
+```bash
+mkdir worklog
+mkdir project-proposal
+mkdir blog-translation
 cp -r ../../templates/* .
 cp -r ../../worklog/template.md worklog/
 cp -r ../../project-proposal/template.md project-proposal/
 cp -r ../../blog-translation/template.md blog-translation/
+
 ```
 
-### Bước 4: Bắt đầu thực hiện
+### Bước 5: Bắt đầu thực hiện
 1. **Ngày 1**: Bắt đầu viết worklog hàng ngày
 2. **Tuần 1-2**: Research và chọn chủ đề project proposal
 3. **Tuần 3-4**: Viết draft proposal và chọn bài blog để dịch
