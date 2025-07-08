@@ -77,10 +77,6 @@
 - CI/CD với AWS CodeFamily rất mạnh mẽ cho ứng dụng cloud-native
 - Networking trên AWS phức tạp, cần thực hành nhiều để hiểu sâu
 
-### ❓ Questions & Curiosities
-- Làm thế nào để tối ưu monitoring/logging cho ECS applications?
-- Các best practices khi triển khai Blue/Green deployment thực tế trên ECS?
-
 ---
 
 ## 📊 Weekly Self Assessment
