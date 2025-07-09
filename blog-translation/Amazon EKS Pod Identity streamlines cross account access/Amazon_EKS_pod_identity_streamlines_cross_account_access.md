@@ -15,7 +15,7 @@
 Amazon EKS Pod Identity vừa ra mắt tính năng mới hỗ trợ truy cập chéo tài khoản (cross-account access), cho phép các ứng dụng chạy trong cụm EKS ở một tài khoản AWS có thể truy cập an toàn vào tài nguyên nằm ở tài khoản khác, chẳng hạn như S3 hoặc DynamoDB. Quá trình thực hiện bắt đầu bằng việc tạo hai vai trò IAM: một vai trò trong tài khoản nguồn (Account A) được liên kết với tài khoản dịch vụ Kubernetes thông qua Pod Identity, và một vai trò trong tài khoản đích (Account B) cấp quyền truy cập tài nguyên và cho phép vai trò từ Account A giả định (assume). Các vai trò này được kết nối bằng cơ chế IAM role chaining. Để tăng cường bảo mật, Amazon EKS Pod Identity tự động chèn externalId vào lệnh AssumeRole để giảm rủi ro confused deputy. Sau khi cấu hình hoàn tất, triển khai một ứng dụng mẫu sử dụng service account đã liên kết. Khi pod khởi động, nó sẽ tự động nhận thông tin xác thực IAM tạm thời của vai trò trong tài khoản đích thông qua agent của EKS. Người dùng có thể xác minh quá trình cấp quyền bằng cách sử dụng AWS CLI. Quá trình này giúp đơn giản hóa đáng kể việc truy cập đa tài khoản trong các kiến trúc cloud-native hiện đại.
 
 **🎯 Đối tượng đọc**: Cloud Engineer, Application Developer, DevOps Engineer.
-**📊 Độ khó**: Intermediate
+**📊 Độ khó**: Intermediate to Advanced
 **🏷️ Tags**:  Amazon Elastic Kubernetes Service, Best Practices, Technical How-to
 
 ---
@@ -53,7 +53,7 @@ Amazon EKS Pod Identity vừa ra mắt tính năng mới hỗ trợ truy cập c
 #### Giới thiệu
 Hôm nay, chúng tôi rất vui mừng thông báo về một cải tiến quan trọng đối với Amazon EKS Pod Identity – quyền truy cập chéo tài khoản được đơn giản hóa cho các ứng dụng Kubernetes. Tính năng mới này giúp quy trình cấp quyền cho pod truy cập tài nguyên AWS trong các tài khoản khác trở nên dễ dàng hơn. Bằng cách cho phép chỉ định IAM role nguồn và đích trong quá trình tạo liên kết Pod Identity, chúng tôi đã loại bỏ sự phức tạp trong cấu hình và thay đổi tầng ứng dụng. Điều này có nghĩa là các ứng dụng Kubernetes của bạn giờ đây có thể truy cập liền mạch vào tài nguyên trên các tài khoản AWS mà không cần thay đổi mã nguồn. Tính năng này sử dụng cơ chế chuỗi IAM role ở phía sau, tự động cung cấp thông tin xác thực tạm thời cần thiết cho các pod trong thời gian chạy.
 
-Tại sự kiện re:Invent 2023, **Amazon Elastic Kubernetes Service (Amazon EKS)** đã giới thiệu tính năng EKS Pod Identity, cho phép người dùng cấu hình ứng dụng **Kubernetes** chạy trên Amazon EKS với quyền kiểm soát truy cập AWS Identity and Access Management (IAM) chi tiết để truy cập các tài nguyên như **Amazon S3** và **Amazon DynamoDB**. Tính năng này đã giải quyết nhiều thách thức hiện có của phương pháp **IAM Roles for Service Accounts** – một cơ chế thay thế để cấp quyền IAM cho các ứng dụng Kubernetes – bằng cách loại bỏ nhu cầu thiết lập nhà cung cấp OIDC cho các cụm EKS, đơn giản hóa chính sách tin cậy IAM và cải thiện trải nghiệm thông qua các API của Amazon EKS. Ngoài ra, tính năng này còn hỗ trợ **IAM role session tag**, cho phép quản trị viên IAM tạo một chính sách quyền duy nhất có thể hoạt động với nhiều role khác nhau bằng cách cấp quyền truy cập dựa trên các thẻ khớp.
+Tại sự kiện re:Invent 2023, [Amazon Elastic Kubernetes Service (Amazon EKS)](https://aws.amazon.com/vi/eks/) đã giới thiệu tính năng EKS Pod Identity, cho phép người dùng cấu hình ứng dụng [Kubernetes](https://kubernetes.io/) chạy trên Amazon EKS với quyền kiểm soát truy cập AWS [Identity and Access Management (IAM)](https://aws.amazon.com/vi/iam/) chi tiết để truy cập các tài nguyên như [Amazon S3](https://aws.amazon.com/s3/) và [Amazon DynamoDB](https://aws.amazon.com/dynamodb/). Tính năng này đã giải quyết nhiều thách thức hiện có của phương pháp [IAM Roles for Service Accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) – một cơ chế thay thế để cấp quyền IAM cho các ứng dụng Kubernetes – bằng cách loại bỏ nhu cầu thiết lập nhà cung cấp OIDC cho các cụm EKS, đơn giản hóa chính sách tin cậy IAM và cải thiện trải nghiệm thông qua các API của Amazon EKS. Ngoài ra, tính năng này còn hỗ trợ [IAM role session tag](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html), cho phép quản trị viên IAM tạo một chính sách quyền duy nhất có thể hoạt động với nhiều role khác nhau bằng cách cấp quyền truy cập dựa trên các thẻ khớp.
 
 Nhưng hành trình của chúng tôi không dừng lại ở việc ra mắt Pod Identity. Thông qua phản hồi liên tục từ người dùng, chúng tôi nhận thấy rằng các chiến lược đa tài khoản rất phổ biến trong số người dùng Amazon EKS, khi workloads trong một tài khoản AWS cần truy cập vào tài nguyên trong một tài khoản khác. Các tình huống phổ biến bao gồm:
   - Các nhóm nền tảng quản lý các cụm EKS đa thuê bao tập trung trong một tài khoản AWS, trong khi các nhóm Đơn vị kinh doanh/Ứng dụng hoạt động trong các Tài khoản AWS riêng biệt. Ví dụ, nhóm nền tảng có thể duy trì cụm EKS dùng chung cho dịch vụ vi mô, trong khi các nhóm ứng dụng triển khai các dịch vụ microservices của họ lên cụm EKS dùng chung nhưng lưu trữ dữ liệu và cấu hình trong các tài khoản AWS tương ứng, đòi hỏi quyền truy cập an toàn giữa các tài khoản.
@@ -88,7 +88,7 @@ Các API sau đây được cập nhật để giới thiệu các phần tử y
 
 #### Làm thế nào để bắt đầu
 Trong phần hướng dẫn này, chúng tôi sẽ trình bày cách một pod Kubernetes đang chạy trong cụm EKS thuộc tài khoản nguồn – AWS Account A – có thể truy cập các tài nguyên AWS khác trong tài khoản đích – AWS Account B, như minh họa trong hình sau.
-![Figure 1](\Image-1-for-Cross-Pod-Identity.jpg)
+![Figure 1](/blog-translation/Amazon%20EKS%20Pod%20Identity%20streamlines%20cross%20account%20access/Image-1-for-Cross-Pod-Identity.jpg)
 *Hình 1:Quy trình ở mức High level do EKS Pod Identity thực hiện để cung cấp thông tin xác thực tạm thời STS cho pod Kubernetes.*
 Luồng thực hiện ở mức high-level như sau:
 1. Người quản trị nền tảng Amazon EKS tạo một IAM role (account-a-role) trong AWS Account A, với chính sách tin cậy(trust policy) cho phép giả định vai trò (AssumeRole) từ principal dịch vụ pods.eks.amazonaws.com và chính sách quyền hạn (permission policy) cho phép giả định vai trò (account-b-role) trong Account B.
@@ -366,43 +366,51 @@ Chúng tôi khuyến khích bạn bắt đầu sử dụng tính năng này và 
 
 | English | Tiếng Việt | Định nghĩa |
 |---------|------------|------------|
-| Auto Scaling | Tự động mở rộng quy mô | Khả năng tự động tăng/giảm resources dựa trên demand |
-| Load Balancer | Bộ cân bằng tải | Phân phối traffic đến multiple servers |
+| IAM role | Vai trò IAM | Phân phối traffic đến multiple servers |
+| IAM Role Chain | Chuỗi vai trò IAM | Một thực thể AWS định nghĩa một tập hợp các quyền mà một user/service có thể đảm nhận |
+| Trust policy | Chính sách tin cậy | Xác định principal nào được phép assume role (AWS account, AWS Services, IAM user) |
+| Permission policy | Chinh sách quyền | Xác định những hành động nào và tài nguyên nào mà IAM role được phép thực hiện sau khi được đảm nhận |
+| Condition statement | Câu lệnh điều khiển | Một phần của policy cho phép giới hạn quyền dựa trên điều kiện cụ thể được dùng để tăng tính linh hoạt và bảo mật |
+| IAM session credentials | Xác thực phiên IAM | Các thông tin tạm thời được tạo ra khi một role được assume, dùng để thực hiện truy cập được cấp phép |
+| Assumed Role | Đảm nhận/Giả định vai trò | Vai trò IAM đang được sử dụng tạm thời sau khi một thực thể đã thực hiện hành động assume role thành công |
+| Workloads | Tác vụ vận hành / Tải công việc | Các dịch vụ đang chạy trên AWS / Các ứng dụng đang chạy trên Kubernetes |
+| Inline session policies | Chính sách phiên nội tuyến | Chính sách quyền tạm thời được đính kèm vào IAM session khi assume role, cho phép kiểm soát bổ sung trong từng phiên làm việc cụ thể |
 | Microservices | Kiến trúc microservices | Architectural pattern chia application thành small services |
-| ... | ... | ... |
+| ARN (Amazon Resource Name) | Tên định danh tài nguyên Amazon | Chuỗi định danh duy nhất cho tài nguyên AWS , dùng để xác định chính xác tài nguyên trong policy |
 
 ## 🔗 Tài liệu tham khảo
 
 ### Tài liệu gốc
-- [Original Article](https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-streamlines-cross-account-access/): Bài viết gốc
-- [Author's Profile](link): Thông tin tác giả
-- [Related Articles](link): Bài viết liên quan
+- Original Article: [Amazon EKS Pod Identity streamlines cross account access](https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-streamlines-cross-account-access/)
+- Author's Profile: [Ashok Srirama](https://www.linkedin.com/in/ashok-srirama/)
+- Author's Profile: [George John](https://www.linkedin.com/in/find-george-john/)
+- Related Articles: [Amazon EKS Pod Identity: a new way for applications on EKS to obtain IAM credentials](https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-a-new-way-for-applications-on-eks-to-obtain-iam-credentials/)
 
 ### Tài liệu tiếng Việt
-- [AWS Documentation VN](link): Tài liệu AWS tiếng Việt
+- [AWS Documentation VN](https://aws.amazon.com/vi/): Tài liệu AWS tiếng Việt
 - [AWS Learning Resources](link): Tài nguyên học tập AWS
-- [Community Discussions](link): Thảo luận cộng đồng
+- [Community Discussions](https://www.facebook.com/groups/660548818043427): Thảo luận cộng đồng
 
 ### Tools và Services
-- [AWS Service 1](link): Mô tả service
-- [AWS Service 2](link): Mô tả service
-- [Third-party Tools](link): Tools bổ sung
+- [Amazon Elastic Kubernetes Service](https://aws.amazon.com/vi/eks/?sc_ichannel=ha&sc_icampaign=acq_awsblogsb&sc_icontent=containers-resources): Amazon EKS là dịch vụ được quản lý hoàn toàn bởi AWS để triển khai, vận hành và mở rộng các ứng dụng container sử dụng Kubernetes
+- [AWS Identity and Access Management](https://aws.amazon.com/vi/iam/): IAM cho phép tạo người dùng, nhóm, vai trò (roles), và chính sách (policies) để kiểm soát quyền truy cập một cách chi tiết và bảo mật.
 
 ---
 
 ## 💬 Ghi chú của người dịch
 
-[Ghi chú về quá trình dịch, challenges gặp phải, insights gained]
+Amazon EKS Pod Identity streamlines cross account access và bài viết nói về tính năng mới cho phép truy cập chéo tài khoản của EKS Pod Identity vì thế bài viết sẽ đi sâu vào hai dịch vụ chính là EKS và IAM. Nên trong bối cảnh bài dịch các dịch vụ liên quan đến IAM như IAM role hay AssumeRole vẫn được giữ nguyên. Ngoài ra trong bối cảnh bài dịch từ workloads được sử dụng với hai ngữ cảnh là các dịch vụ đang chạy trên AWS và các ứng dụng chạy trên cụm Kubernetes nên người đọc cần nắm rõ nghĩa trong hai ngữ cảnh khác nhau. Ngoài ra bài dịch có những thay đổi về từ ngữ và cách diễn đạt phù hợp với người đọc bằng tiếng Việt nhưng vẫn đảm bảo tính chính xác và đầy đủ về nội dung.
+Tôi hi vọng rằng thông qua bài dịch này sẽ giúp người đọc nắm bắt được những thay đổi về tính năng mới này của EKS Pod Identity và có thể áp dụng hiệu quả trong môi trường đa tài khoản hiện nay.
 
 ### Challenges trong quá trình dịch
-- **Technical Terms**: [Thuật ngữ khó dịch và cách giải quyết]
-- **Cultural Context**: [Context cần adapt cho VN]
-- **Complex Concepts**: [Khái niệm phức tạp và cách giải thích]
+- **Technical Terms**: Các thuật ngữ chuyên sâu về IAM như: IAM role, IAM role chain, AssumeRole,... khó để dịch sát nghĩa trong bối cảnh tài liệu kỹ thuật, nên trong bối cảnh bài dịch thì các thuật ngữ này được giữ nguyên và có thêm phần chú thích về thuật ngữ và định nghĩa đảm bảo tính nhất quán và liền mạch.
+- **Cultural Context**: Một vài cụm trong bài viết gốc sử dụng những cụm từ phổ biến trong văn phong của Tiếng Anh nhưng không phổ biến trong Tiếng Việt vì thế khi dịch cần thay đổi các cụm đó thành các từ phù hợp và quen thuộc hơn. 
+- **Complex Concepts**: Các khái niệm về cơ chế cấp quyền thông qua IAM role chain,vấn đề confused deputy, và session tags đều trừu tượng đặt nặng tính kỹ thuật và hiểu biết chuyên môn, cần diễn giải bằng ngôn ngữ đời thường kết hợp với giải thích các tính năng liên quan hoặc đặt trong các ví dụ minh hoạ cụ thế.
 
 ### Insights gained
-- **Technical Learning**: [Kiến thức kỹ thuật học được]
-- **Language Skills**: [Kỹ năng ngôn ngữ phát triển]
-- **Industry Knowledge**: [Hiểu biết ngành nghề]
+- **Technical Learning**: Cách hoạt động của EKS pod Identity và cơ chế mới cross-account cho chuỗi IAM role. 
+- **Language Skills**: Nâng cao khả năng đọc, hiểu và dịch tài liệu chuyên ngành đảm bảo tính nhất quán, đầy đủ nội dung nhưng vẫn đảm bảo đúng các thuật ngữ về kỹ thuật, không máy móc, dễ tiếp cận với người đọc bằng tiếng Việt.
+- **Industry Knowledge**: Hiểu biết thêm về cách phân quyền và quản lý trong môi trường đa tài khoản AWS cũng như cập nhật các thay đổi mới nhất về các tính năng dịch vụ EKS về quản lý truy cập giữa các tài khoản khác nhau thông qua tính năng EKS pod identity.
 
 ---
 
