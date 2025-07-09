@@ -84,7 +84,7 @@ Quy trình làm việc xử lý các truy vấn của người dùng thông qua 
 Đối với ví dụ này, bạn cần những điều sau:
 
 *   [Quyền truy cập vào SageMaker Unified Studio](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/userguide/getting-started-access-the-portal.html). (Bạn sẽ cần URL cổng thông tin SageMaker Unified Studio từ quản trị viên của mình). Bạn có thể xác thực bằng cách sử dụng:
-    *   Thông tin đăng nhập của người dùng [[AWS Identity and Access Management](https://aws.amazon.com/iam/) \(IAM\)](https://aws.amazon.com/iam/).
+    *   Thông tin đăng nhập của người dùng [AWS Identity and Access Management](https://aws.amazon.com/iam/)
     *   Thông tin đăng nhập một lần (SSO) với [AWS IAM Identity Center](https://aws.amazon.com/iam/identity-center/).
 *   Người dùng IAM hoặc người dùng IAM Identity Center phải có các quyền thích hợp cho:
     *   SageMaker Unified Studio.
