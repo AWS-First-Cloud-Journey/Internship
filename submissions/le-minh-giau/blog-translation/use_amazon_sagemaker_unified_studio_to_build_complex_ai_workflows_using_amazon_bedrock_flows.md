@@ -83,15 +83,15 @@ Quy trình làm việc xử lý các truy vấn của người dùng thông qua 
 
 Đối với ví dụ này, bạn cần những điều sau:
 
-*   Quyền truy cập vào SageMaker Unified Studio. (Bạn sẽ cần URL cổng thông tin SageMaker Unified Studio từ quản trị viên của mình). Bạn có thể xác thực bằng cách sử dụng:
-    *   Thông tin đăng nhập của người dùng [AWS Identity and Access Management \(IAM\)](https://aws.amazon.com/iam/).
+*   [Quyền truy cập vào SageMaker Unified Studio](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/userguide/getting-started-access-the-portal.html). (Bạn sẽ cần URL cổng thông tin SageMaker Unified Studio từ quản trị viên của mình). Bạn có thể xác thực bằng cách sử dụng:
+    *   Thông tin đăng nhập của người dùng [[AWS Identity and Access Management](https://aws.amazon.com/iam/) \(IAM\)](https://aws.amazon.com/iam/).
     *   Thông tin đăng nhập một lần (SSO) với [AWS IAM Identity Center](https://aws.amazon.com/iam/identity-center/).
 *   Người dùng IAM hoặc người dùng IAM Identity Center phải có các quyền thích hợp cho:
     *   SageMaker Unified Studio.
     *   Amazon Bedrock (bao gồm [Amazon Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html), [Amazon Bedrock Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html), Amazon Bedrock Prompt Management, và [Amazon Bedrock Knowledge Bases](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)).
-    *   Để biết thêm thông tin, hãy tham khảo các ví dụ về chính sách dựa trên danh tính.
-*   Quyền truy cập vào các FMs của Amazon Bedrock (đảm bảo rằng chúng được bật cho tài khoản của bạn), ví dụ: Claude 3 Haiku của Anthropic (cho Agent).
-*   Định cấu hình quyền truy cập vào các mô hình không có máy chủ Amazon Bedrock của bạn cho Amazon Bedrock trong các dự án SageMaker Unified Studio.
+    *   Để biết thêm thông tin, hãy tham khảo [các ví dụ về chính sách dựa trên danh tính](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/adminguide/security_iam_id-based-policy-examples.html).
+*   [Quyền truy cập vào các FMs của Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) (đảm bảo rằng chúng được bật cho tài khoản của bạn), ví dụ: Claude 3 Haiku của Anthropic (cho Agent).
+*   [Định cấu hình quyền truy cập](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/adminguide/amazon-bedrock.html) vào các mô hình không có máy chủ Amazon Bedrock của bạn cho Amazon Bedrock trong các dự án SageMaker Unified Studio.
 *   [Amazon Titan Embedding](https://aws.amazon.com/bedrock/titan/) (cho Knowledge Base).
 *   Dữ liệu khiếu nại mẫu được chuẩn bị ở định dạng CSV để tạo Knowledge Base.
 
@@ -185,7 +185,7 @@ Bây giờ chúng ta đã sẵn sàng prompt và Agent, hãy tạo một Flow s�
 
 ### THÊM KNOWLEDGE BASE VÀO FLOW APP CỦA BẠN
 
-Hoàn thành các bước sau để thêm một nút Knowledge Base vào Flow:
+Hoàn thành các bước sau để thêm một nút Knowledge Base (Knowledge Base node) vào Flow:
 
 1.  Trong ngăn điều hướng, trên tab **Nodes**, chọn **Knowledge Base**.
 2.  Trên tab **Configure**, cung cấp thông tin sau:
@@ -201,8 +201,8 @@ Hoàn thành các bước sau để thêm một nút Knowledge Base vào Flow:
 4.  Sau khi bạn tạo Knowledge Base, hãy chọn nó trong Flow.
 5.  Trong tên chi tiết, cung cấp thông tin sau:
 6.  Đối với **Response generation model**, hãy chọn **Claude 3 Haiku**.
-7.  Kết nối đầu ra của nút đầu vào Flow với đầu vào của nút Knowledge Base.
-8.  Kết nối đầu ra của nút Knowledge Base với đầu vào của nút đầu ra Flow.
+7.  Kết nối đầu ra của nút đầu vào Flow (Flow input node) với đầu vào của nút Knowledge Base (Knowledge Base node).
+8.  Kết nối đầu ra của nút Knowledge Base (Knowledge Base node) với đầu vào của nút đầu ra Flow (Flow output node).
 9.  Chọn **Save**.
 
 ![Knowledge Base](./images/8_Knowledge_base_image-8.png)
@@ -212,25 +212,25 @@ Hoàn thành các bước sau để thêm một nút Knowledge Base vào Flow:
 
 Bây giờ, hãy thêm prompt bạn đã tạo trước đó vào Flow:
 
-1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm một nút prompt.
-2.  Trên tab **Configure** cho nút prompt, cung cấp thông tin sau:
+1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm một nút prompt (Prompt node).
+2.  Trên tab **Configure** cho nút prompt (Prompt node), cung cấp thông tin sau:
 3.  Đối với **Node name**, hãy nhập một tên (ví dụ: `demo_prompt`).
 4.  Đối với **Prompt**, hãy chọn `financeAssistantPrompt`.
 5.  Đối với **Version**, hãy chọn `1`.
-6.  Kết nối đầu ra của nút Knowledge Base với đầu vào của nút prompt.
+6.  Kết nối đầu ra của nút Knowledge Base (Knowledge Base node) với đầu vào của nút prompt (Prompt node).
 7.  Chọn **Save**.
 
 ![KB to Prompt Connection](./images/10_KB_Prompt_connection_image-10.png)
 
 ### THÊM ĐIỀU KIỆN VÀO FLOW APP CỦA BẠN
 
-Nút điều kiện xác định cách Flow xử lý các loại truy vấn khác nhau. Nó đánh giá xem một truy vấn có phải về thời gian giải quyết hay thông tin khiếu nại chung hay không, cho phép Flow định tuyến truy vấn một cách thích hợp. Khi một truy vấn về thời gian giải quyết, nó sẽ được chuyển đến Chat Agent để xử lý chuyên biệt; nếu không, nó sẽ nhận được phản hồi trực tiếp từ Knowledge Base. Hoàn thành các bước sau để thêm một điều kiện:
+Nút điều kiện (Condition node) xác định cách Flow xử lý các loại truy vấn khác nhau. Nó đánh giá xem một truy vấn có phải về thời gian giải quyết hay thông tin khiếu nại chung hay không, cho phép Flow định tuyến truy vấn một cách thích hợp. Khi một truy vấn về thời gian giải quyết, nó sẽ được chuyển đến Chat Agent để xử lý chuyên biệt; nếu không, nó sẽ nhận được phản hồi trực tiếp từ Knowledge Base. Hoàn thành các bước sau để thêm một điều kiện:
 
-1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm một nút điều kiện.
-2.  Trên tab **Configure** cho nút điều kiện, cung cấp thông tin sau:
+1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm một nút điều kiện (Condition node).
+2.  Trên tab **Configure** cho nút điều kiện (Condition node), cung cấp thông tin sau:
     a. Đối với **Node name**, hãy nhập một tên (ví dụ: `demo_condition`).
     b. Trong **Conditions**, đối với **Condition**, hãy nhập `conditionInput == "T"`.
-    c. Kết nối đầu ra của nút prompt với đầu vào của nút điều kiện.
+    c. Kết nối đầu ra của nút prompt (Prompt node) với đầu vào của nút điều kiện (Condition node).
 3.  Chọn **Save**.
 
 ![Condition Connection](./images/11_condition_connection_image-11.png)
@@ -239,20 +239,20 @@ Nút điều kiện xác định cách Flow xử lý các loại truy vấn khá
 
 Bây giờ, hãy thêm Chat Agent bạn đã tạo trước đó vào Flow:
 
-1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm nút Agent.
-2.  Trên tab **Configure** cho nút Agent, cung cấp thông tin sau:
+1.  Trên tab **Nodes** trong ngăn trình tạo flow app, hãy thêm nút Agent (Agent node).
+2.  Trên tab **Configure** cho nút Agent (Agent node), cung cấp thông tin sau:
     a. Đối với **Node name**, hãy nhập một tên (ví dụ: `demo_agent`).
     b. Đối với **Chat agent**, hãy chọn `DemoAgent`.
     c. Đối với **Alias**, hãy chọn `demoAlias`.
 3.  Tạo các kết nối nút sau:
-    a. Kết nối đầu vào của nút điều kiện (`demo_condition`) với đầu ra của nút prompt (`demo_prompt`).
-    b. Kết nối đầu ra của nút điều kiện:
-       i.  Đặt **If condition is true** thành nút Agent (`demo_agent`).
-       ii. Đặt **If condition is false** thành nút đầu ra Flow hiện có (`FlowOutputNode`).
-    c. Kết nối đầu ra của nút Knowledge Base (`complaints_kb`) với đầu vào của những thứ sau:
-       i.  Nút Agent (`demo_agent`).
-       ii. Nút đầu ra Flow (`FlowOutputNode`).
-    d. Kết nối đầu ra của nút Agent (`demo_agent`) với một nút đầu ra Flow mới có tên `FlowOutputNode_2`.
+    a. Kết nối đầu vào của nút điều kiện (Condition node) (`demo_condition`) với đầu ra của nút prompt (Prompt node) (`demo_prompt`).
+    b. Kết nối đầu ra của nút điều kiện (Condition node):
+       i.  Đặt **If condition is true** thành nút Agent (Agent node) (`demo_agent`).
+       ii. Đặt **If condition is false** thành nút đầu ra Flow (Flow output node) hiện có (`FlowOutputNode`).
+    c. Kết nối đầu ra của nút Knowledge Base (Knowledge Base node) (`complaints_kb`) với đầu vào của những thứ sau:
+       i.  Nút Agent (Agent node) (`demo_agent`).
+       ii. Nút đầu ra Flow (Flow output node) (`FlowOutputNode`).
+    d. Kết nối đầu ra của nút Agent (Agent node) (`demo_agent`) với một nút đầu ra Flow (Flow output node) mới có tên `FlowOutputNode_2`.
 4.  Chọn **Save**.
 
 ![Agent Connection](./images/12_agent_connection_image-12.png)
@@ -273,9 +273,9 @@ Trong hộp văn bản **Enter prompt**, chúng ta có thể hỏi một vài c�
 
 ### KẾT LUẬN
 
-Trong bài đăng này, chúng tôi đã trình bày cách xây dựng một hệ thống tham chiếu khiếu nại được hỗ trợ bởi AI bằng cách sử dụng một flow app trong SageMaker Unified Studio. Bằng cách sử dụng các khả năng tích hợp của SageMaker Unified Studio với các tính năng của Amazon Bedrock như [Amazon Bedrock Knowledge Bases](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), [Amazon Bedrock Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) và [Amazon Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html), bạn có thể nhanh chóng phát triển và triển khai các ứng dụng AI tinh vi mà không cần viết mã rộng rãi.
+Trong bài đăng này, chúng tôi đã trình bày cách xây dựng một hệ thống tham chiếu khiếu nại được hỗ trợ bởi AI bằng cách sử dụng một flow app trong SageMaker Unified Studio. Bằng cách sử dụng các khả năng tích hợp của SageMaker Unified Studio với các tính năng của Amazon Bedrock như [Amazon Bedrock Knowledge Bases](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), [Amazon Bedrock Agents](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) và [Amazon Bedrock Flows](https://docs.aws.amazon.com/bedrock/latest/userguide/flows.html), bạn có thể nhanh chóng phát triển và triển khai các ứng dụng AI phức tạp mà không cần viết mã rộng rãi.
 
-Khi bạn xây dựng các quy trình làm việc AI bằng SageMaker Unified Studio, hãy nhớ tuân thủ Mô hình trách nhiệm chung của AWS về bảo mật. Triển khai các phương pháp hay nhất về bảo mật của SageMaker Unified Studio, bao gồm các cấu hình IAM phù hợp và mã hóa dữ liệu. Bạn cũng có thể tham khảo Bảo mật một trợ lý AI tạo sinh với giảm thiểu OWASP Top 10 để biết chi tiết về cách đánh giá tình hình bảo mật của một trợ lý AI tạo sinh bằng cách sử dụng các biện pháp giảm thiểu OWASP TOP 10 cho các mối đe dọa phổ biến. Việc tuân theo các nguyên tắc này giúp thiết lập các ứng dụng AI mạnh mẽ duy trì tính toàn vẹn của dữ liệu và bảo vệ hệ thống.
+Khi bạn xây dựng các quy trình làm việc AI bằng SageMaker Unified Studio, hãy nhớ tuân thủ [Mô hình chia sẻ trách nhiệm](https://aws.amazon.com/compliance/shared-responsibility-model/) của AWS về bảo mật. Triển khai các best practices về [bảo mật](https://docs.aws.amazon.com/sagemaker-unified-studio/latest/adminguide/security.html) của SageMaker Unified Studio, bao gồm các cấu hình IAM phù hợp và mã hóa dữ liệu. Bạn cũng có thể tham khảo [Bảo mật một trợ lý AI tạo sinh với OWASP Top 10 mitigation](https://aws.amazon.com/blogs/machine-learning/secure-a-generative-ai-assistant-with-owasp-top-10-mitigation/) để biết chi tiết về cách đánh giá tình hình bảo mật của một trợ lý AI tạo sinh bằng cách sử dụng các biện pháp giảm thiểu OWASP TOP 10 cho các mối đe dọa phổ biến. Việc tuân theo các nguyên tắc này giúp thiết lập các ứng dụng AI mạnh mẽ duy trì tính toàn vẹn của dữ liệu và bảo vệ hệ thống.
 
 Để tìm hiểu thêm, hãy tham khảo Amazon Bedrock trong SageMaker Unified Studio và tham gia các cuộc thảo luận và chia sẻ kinh nghiệm của bạn trong Cộng đồng AI tạo sinh của AWS.
 
