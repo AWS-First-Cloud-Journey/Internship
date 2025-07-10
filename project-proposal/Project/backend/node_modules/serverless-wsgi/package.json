@@ -1,0 +1,67 @@
+{
+  "name": "serverless-wsgi",
+  "version": "3.1.0",
+  "engines": {
+    "node": ">=10"
+  },
+  "description": "Serverless WSGI Plugin",
+  "author": "logan.dk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logandk/serverless-wsgi"
+  },
+  "keywords": [
+    "serverless",
+    "wsgi",
+    "flask",
+    "serverless framework plugin",
+    "serverless applications",
+    "serverless plugins",
+    "api gateway",
+    "lambda",
+    "aws",
+    "aws lambda",
+    "amazon",
+    "amazon web services",
+    "serverless.com"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "requirements.py",
+    "requirements.txt",
+    "serve.py",
+    "wsgi_handler.py",
+    "serverless_wsgi.py"
+  ],
+  "main": "index.js",
+  "bin": {},
+  "scripts": {
+    "test": "istanbul cover -x '*.test.js' node_modules/mocha/bin/_mocha '*.test.js' -- -R spec",
+    "lint": "eslint *.js",
+    "pytest": "py.test --cov=serve --cov=requirements --cov=wsgi_handler --cov=serverless_wsgi --cov-report=html",
+    "pylint": "flake8 --exclude node_modules,.devenv"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.50.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^10.2.0",
+    "sinon": "^16.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "command-exists": "^1.2.9",
+    "fs-extra": "^11.2.0",
+    "lodash": "^4.17.21",
+    "process-utils": "^4.0.0"
+  },
+  "peerDependences": {
+    "serverless": "^2.32.0"
+  }
+}
