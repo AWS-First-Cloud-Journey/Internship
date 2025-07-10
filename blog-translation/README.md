@@ -156,7 +156,7 @@ Blog Translation là cơ hội để thực tập sinh:
 > **👤 Tác giả**: [Author name and title]  
 > **📅 Ngày xuất bản**: [Original publish date]  
 > **🌐 Nguồn**: [Publication name]  
-> **👨‍💻 Người dịch**: [Your name] - FCJ Intern  
+> **👨‍💻 Người dịch**: Nguyễn Minh Tân - FCJ Intern  
 > **📅 Ngày dịch**: [Translation date]  
 > **⏱️ Thời gian đọc**: [Estimated reading time] phút
 
