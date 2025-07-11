@@ -1,6 +1,6 @@
 # Amazon EKS Pod Identity mở rộng khả năng truy cập tài nguyên AWS giữa nhiều tài khoản
 
-> **📖 Bài viết gốc**: https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-streamlines-cross-account-access/
+> **📖 Bài viết gốc**:[Amazon EKS Pod Identity streamlines cross account access](https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-streamlines-cross-account-access/)
 > **👤 Tác giả**: Ashok Srirama, George John
 > **📅 Ngày xuất bản**: 12/6/2025  
 > **🌐 Nguồn**: AWS Blogs
