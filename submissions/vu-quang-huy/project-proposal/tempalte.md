@@ -360,3 +360,5 @@ Các chi phí được tính toán dựa trên AWS Region Singapore (ap-southeas
 1. [Enable outbound IPv6 traffic using an egress-only internet gateway](https://docs.aws.amazon.com/vpc/latest/userguide/egress-only-internet-gateway.html)
 2. [Modernize Applications with Microservices Using Amazon EKS](https://docs.aws.amazon.com/architecture-diagrams/latest/modernize-applications-with-microservices-using-amazon-eks/modernize-applications-with-microservices-using-amazon-eks.html#diagram-history)
 3. [AWS services that support IPv6](https://docs.aws.amazon.com/vpc/latest/userguide/aws-ipv6-support.html)
+4. [Dual-stack IPv6 architectures for AWS and hybrid networks](https://aws.amazon.com/vi/blogs/networking-and-content-delivery/dual-stack-ipv6-architectures-for-aws-and-hybrid-networks/)
+5. [Netflix’s IPv6 journey: Building network configurations on AWS](https://d1.awsstatic.com/events/Summits/reinvent2023/NFX301-R_Netflixs-IPv6-journey-Building-network-configurations-on-AWS-REPEAT.pdf)
