@@ -133,15 +133,13 @@ Giải pháp áp dụng **kiến trúc serverless – event-driven** để đáp
 2. **Tự động mở rộng** khi lượng truy cập tăng gấp 10× (Flash Sale).
 3. **Tối ưu chi phí** nhờ thanh toán theo mức sử dụng (pay-per-use).
 
-![Arch 1](./images/sln_arch_1.png)
+![Arch 1](./images/sln_arch.png)
 
 *Luồng chính (mũi tên màu đỏ)*: người dùng gọi **REST API** lấy gợi ý → **Lambda** nhận request, truy vấn **Amazon Personalize real-time recommend endpoint** → trả về 3-10 SKU gợi ý.
 
 *Luồng gửi clickstream (mũi tên màu tím)*: Frontend gửi hành vi (view, add-to-cart) vào **Amazon Kinesis Data Streams** → **Lambda consumer** ghi vào **DynamoDB** và **S3**. Dữ liệu mới nhất (≤ 1 phút) được **Personalize** cập nhật thông qua **PutEvents** API, bảo đảm đề xuất luôn “fresh”.
 
-Ngoài ta, ta còn một luồng phụ khác là Train và Batch Retrain
-
-![Arch 1](./images/flow2.png)
+Ngoài ta, ta còn một luồng phụ khác là Train và Batch Retrain:
 
 *Luồng train ban đầu*: Dữ liệu giao dịch + clickstream lịch sử (CSV/Parquet) được Glue ETL chuẩn hoá và nạp vào Amazon S3 → Lambda khởi tạo Dataset Group & Dataset Import Jobs trên Amazon Personalize → Personalize huấn luyện Solution Version đầu tiên, triển khai Campaign production, sẵn sàng phục vụ gợi ý.
 
