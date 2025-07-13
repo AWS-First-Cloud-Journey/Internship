@@ -3,7 +3,7 @@
 ## 📅 Thông tin cơ bản
 - **Ngày**: 09/07/2025
 - **Thứ**: Thứ Tư
-- **Tuần thực tập**: Tuần thứ 10/8
+- **Tuần thực tập**: Tuần thứ 9
 - **Thời gian làm việc**: 8:00 - 17:00
 - **Mood**: 😔 Rất tệ (lo lắng không lấy được mộc đúng hạn)
 

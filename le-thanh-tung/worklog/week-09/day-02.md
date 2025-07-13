@@ -1,153 +1,110 @@
-# Worklog - Ngày [DD/MM/YYYY]
+# Worklog - Ngày 08/07/2025
 
 ## 📅 Thông tin cơ bản
-- **Ngày**: [DD/MM/YYYY]
-- **Thứ**: [Thứ trong tuần]
-- **Tuần thực tập**: [Tuần thứ X/8]
-- **Thời gian làm việc**: [8:00 - 17:00]
-- **Mood**: [😊/😐/😔] + [Lý do]
+- **Ngày**: 08/07/2025
+- **Thứ**: Thứ Ba
+- **Tuần thực tập**: Tuần thứ 9
+- **Thời gian làm việc**: 8:00 - 11:00
+- **Mood**: 🙂 Tò mò, học hỏi
 
 ## 🎯 Mục tiêu ngày hôm nay
-- [ ] Mục tiêu 1: [Cụ thể, đo lường được]
-- [ ] Mục tiêu 2: [Cụ thể, đo lường được]
-- [ ] Mục tiêu 3: [Cụ thể, đo lường được]
+- Dịch blog: "Lựa chọn phương pháp cho truy xuất dữ liệu có cấu trúc bằng AI tạo sinh"
+- Phân tích các mô hình kiến trúc AI cho doanh nghiệp
+- So sánh các công cụ: Amazon Q, QuickSight, Bedrock, SageMaker
 
 ## 💼 Công việc đã thực hiện
 
-### 1. [Tên công việc 1] ⏱️ [Thời gian]
-- **Mô tả**: [Chi tiết công việc đã làm]
-- **Kết quả**: [Kết quả cụ thể đạt được]
-- **Tools/Tech**: [AWS services, tools, languages sử dụng]
-- **Links**: [GitHub commits, documentation, screenshots]
+### 1. Dịch blog Generative AI-powered Structured Data Retrieval ⏱️ ~1.5 tiếng
+- **Nội dung**: Giới thiệu 5 mô hình kết hợp AI tạo sinh với truy vấn dữ liệu trên AWS
+    - Amazon Q Business
+    - Amazon Q in QuickSight
+    - Amazon Bedrock Knowledge Bases
+    - Tùy biến text-to-SQL qua Bedrock/SageMaker
+- **Kết quả**:
+    - Dịch hoàn chỉnh toàn bộ nội dung và glossary
+    - Ghi chú chi tiết các kiến trúc khác nhau để triển khai GenAI truy vấn dữ liệu
 
-### 2. [Tên công việc 2] ⏱️ [Thời gian]
-- **Mô tả**: [Chi tiết công việc đã làm]
-- **Kết quả**: [Kết quả cụ thể đạt được]
-- **Tools/Tech**: [AWS services, tools, languages sử dụng]
-- **Links**: [GitHub commits, documentation, screenshots]
+### 2. Tổng hợp và phân tích thuật ngữ khó
+- Foundation model, Knowledge Base, Text-to-SQL, Generative BI
+
+### 3. Công cụ hỗ trợ
+- AWS Amazon Q: dịch toàn bộ phần kiến trúc
+- Google Translate + ChatGPT: phân tích mô hình text-to-SQL
+- AWS Docs về Bedrock và SageMaker
 
 ## 📚 Kiến thức học được
 
 ### 🔧 Technical Skills
-- **AWS Services**: [Services đã tìm hiểu/sử dụng]
-- **Programming**: [Languages, frameworks, libraries]
-- **DevOps**: [Tools, practices, methodologies]
-- **Architecture**: [Patterns, best practices]
+- So sánh ưu nhược điểm các giải pháp GenAI dùng cho BI
+- Hiểu cách Bedrock hỗ trợ truy vấn SQL tự động từ câu hỏi tự nhiên
 
-### 💡 Concepts & Theory
-- **New Concepts**: [Khái niệm mới học được]
-- **Best Practices**: [Best practices áp dụng]
-- **Industry Knowledge**: [Kiến thức ngành, trends]
+### 📖 Thuật ngữ chuyên ngành
 
-### 🤝 Soft Skills
-- **Communication**: [Presentation, writing, collaboration]
-- **Problem Solving**: [Analytical thinking, debugging]
-- **Time Management**: [Planning, prioritization]
-- **Learning**: [Research skills, self-learning]
+| English                | Tiếng Việt             | Ghi chú |
+|------------------------|------------------------|--------|
+| Generative BI          | BI sinh dữ liệu        | Tạo báo cáo tự động từ prompt |
+| Knowledge Base         | Cơ sở tri thức         | Tập hợp dữ liệu hỗ trợ truy vấn AI |
+| Text-to-SQL            | Chuyển văn bản thành SQL | Dùng LLM để tự tạo câu truy vấn |
+| Foundation Model       | Mô hình nền tảng       | Mô hình AI tổng quát hóa cao |
 
-## 🚧 Khó khăn và giải pháp
+## 🚧 Khó khăn & giải pháp
 
-### Vấn đề 1: [Tên vấn đề]
-- **Mô tả**: [Chi tiết vấn đề gặp phải]
-- **Impact**: [Ảnh hưởng đến công việc/học tập]
-- **Root Cause**: [Nguyên nhân gốc rễ]
-- **Solution**: [Cách giải quyết đã áp dụng]
-- **Result**: [Kết quả sau khi giải quyết]
-- **Lesson**: [Bài học rút ra]
-
-### Vấn đề 2: [Tên vấn đề]
-- **Mô tả**: [Chi tiết vấn đề gặp phải]
-- **Impact**: [Ảnh hưởng đến công việc/học tập]
-- **Root Cause**: [Nguyên nhân gốc rễ]
-- **Solution**: [Cách giải quyết đã áp dụng]
-- **Result**: [Kết quả sau khi giải quyết]
-- **Lesson**: [Bài học rút ra]
+- **Vấn đề**: Các kiến trúc trong bài viết có nhiều thuật ngữ viết tắt khó hiểu (QuickSight, Q Biz…)
+- **Giải pháp**: Đọc thêm tài liệu gốc + kiểm tra trang demo của AWS Q
 
 ## 💭 Reflection & Insights
 
 ### What went well today?
-- [Điều gì đã diễn ra tốt]
-- [Thành công nào đạt được]
-- [Kỹ năng nào được cải thiện]
+- Dịch nhanh, hiểu tốt các mô hình ứng dụng GenAI trong phân tích dữ liệu doanh nghiệp
 
 ### What could be improved?
-- [Điều gì có thể làm tốt hơn]
-- [Kỹ năng nào cần phát triển]
-- [Process nào cần tối ưu]
+- Nếu có thời gian nên vẽ lại sơ đồ hệ thống từng mô hình để dễ nhớ hơn
 
-### Key Insights
-- [Insight quan trọng về technical]
-- [Insight về career/industry]
-- [Insight về bản thân]
-
-### Questions & Curiosities
-- [Câu hỏi cần tìm hiểu thêm]
-- [Chủ đề muốn explore]
-- [Feedback cần từ mentor]
-
-## 📋 Kế hoạch ngày mai
-
-### Priority Tasks
-- [ ] **High**: [Task quan trọng nhất]
-- [ ] **Medium**: [Task quan trọng vừa]
-- [ ] **Low**: [Task có thể hoãn]
-
-### Learning Goals
-- [ ] [Kiến thức/kỹ năng muốn học]
-- [ ] [Documentation muốn đọc]
-- [ ] [Tutorial muốn follow]
-
-### Meetings & Deadlines
-- [ ] [Meeting/deadline quan trọng]
-- [ ] [Deliverable cần hoàn thành]
+## 📋 Kế hoạch tiếp theo
+- Chuẩn bị ghi chú và tài liệu chia sẻ cho các bạn intern khác về AI trong phân tích dữ liệu
 
 ## 📊 Self Assessment
 
 ### Productivity
-- **Score**: [1-10]
-- **Reason**: [Lý do cho điểm này]
-- **Improvement**: [Cách cải thiện]
+- **Score**: 6/10  
+- **Reason**: Dịch hoàn chỉnh một bài nâng cao, quản lý được tiến độ dù nội dung khá nặng.
 
 ### Learning
-- **Score**: [1-10]
-- **New Knowledge**: [Kiến thức mới học được]
-- **Application**: [Cách áp dụng kiến thức]
+- **Score**: 6/10  
+- **New Knowledge**: Vault Lock, multi-party approval, architecture resilience.  
+- **Application**: Hiểu rõ hơn về cách AWS xử lý sự cố bảo mật khi backup.
 
 ### Collaboration
-- **Score**: [1-10]
-- **Interactions**: [Tương tác với team/mentor]
-- **Contributions**: [Đóng góp cho team]
+- **Score**: 4/10  
+- **Interactions**: Tự học là chính, tham khảo cộng đồng AWS Study Group.  
+- **Contributions**: Chưa có feedback chính thức, sẽ gửi sau khi hoàn tất biên dịch.
 
 ### Overall Satisfaction
-- **Score**: [1-10]
-- **Highlights**: [Điểm nổi bật của ngày]
-- **Areas for Growth**: [Lĩnh vực cần phát triển]
+- **Score**: 6/10  
+- **Highlights**: Hoàn thành bài dịch blog rất chuyên sâu.  
+- **Areas for Growth**: Cần cải thiện kỹ năng tra cứu kiến trúc bảo mật AWS chuyên sâu.
 
 ## 📎 Attachments & Links
 
-### Code & Projects
-- [GitHub commits](link)
-- [Pull requests](link)
-- [Documentation](link)
+### Code & Projects  
+- [ ] *(không có)*
 
-### Learning Resources
-- [Articles read](link)
-- [Videos watched](link)
-- [Courses completed](link)
+### Learning Resources  
+- [Tài liệu học tập](http://f000001.awsstudygroup.com/vi/)  
+- [YouTube Study Group](https://www.youtube.com/@AWSStudyGroup)
 
-### Screenshots & Demos
-- [AWS Console screenshots]
-- [Application demos]
-- [Architecture diagrams]
+### Screenshots & Demos  
+- [ ] *(không có)*
 
 ---
 
-**📝 Notes for tomorrow:**
-[Ghi chú quan trọng cho ngày mai]
+**📝 Notes for tomorrow:**  
+- Tiếp tục bài dịch thứ hai về Generative AI và truy vấn dữ liệu.  
+- Ghi chú lại các khái niệm ML nâng cao và so sánh kiến trúc.
 
-**🎯 Week Progress:**
-[Tiến độ so với mục tiêu tuần]
+**🎯 Week Progress:**  
+- Hoàn thành 50% mục tiêu tuần: 1 bài dịch kỹ thuật nâng cao, ứng dụng vào nghiên cứu sâu.
 
 ---
-*Worklog created by: [Tên thực tập sinh]*  
-*Next review: [Ngày review tiếp theo]*
+*Worklog created by: Lê Thanh Tùng*   
+*Next review: 09/07/2025*

@@ -28,60 +28,47 @@
 ## 📚 Kiến thức học được
 
 ### 🔧 Technical Skills
-- **AWS Services**: SageMaker Studio, Debugger, Model Monitor, Pipelines
+- **AWS Services**: SageMaker Studio
 - **Programming**: *(không áp dụng hôm nay)*
-- **DevOps**: Áp dụng CI/CD trong ML workflow
+- **DevOps**: *(không rõ)*
 - **Architecture**: Kiến trúc ML production – từ dữ liệu, training, deployment đến observability
 
 ### 💡 Concepts & Theory
 - **New Concepts**:
-  - Real-time model debugging
-  - Continuous training & monitoring pipeline
-  - MLOps best practices với SageMaker
+
 - **Best Practices**:
-  - Sử dụng Debugger ngay từ đầu để catch lỗi sớm
-  - Thiết lập Model Monitor & Alert khi drift xảy ra
-  - Dùng Pipelines để tự động hóa end-to-end ML workflows
+
 - **Industry Knowledge**:
-  - MLOps là xu hướng tất yếu với ML production scale
-  - SageMaker hỗ trợ tích hợp nhiều thành phần: governance, compliance và scale
+
 
 ### 🤝 Soft Skills
-- **Communication**: Giao lưu với các chuyên gia AWS, học hỏi từ case-study thực tế
-- **Problem Solving**: Nhìn thấy cách debug và thiết kế fallbacks cho ML pipeline
-- **Time Management**: Theo dõi sát roadmap sự kiện để không bỏ sót phần quan trọng
-- **Learning**: Ghi chép các công cụ/lưu ý để áp dụng vào dự án NLP
+- **Communication**: 
+- **Problem Solving**: 
+- **Time Management**: 
+- **Learning**: 
 
 ## 🚧 Khó khăn và giải pháp
 
 ### Vấn đề 1: Nội dung kỹ thuật sâu, cần kiến thức nền
-- **Mô tả**: Một số nội dung như Debugger tensor flow hoặc CI/CD pipelines trình bày quá nhanh
+- **Mô tả**: Nhiều nội dung bằng tiếng anh phức tạp, không hiểu hết nội dung
 - **Impact**: Khó ghi chép và hiểu hết trong thời gian trực tiếp
-- **Root Cause**: Thiếu background MLOps & Tensor Debugging
+- **Root Cause**: Tiếng anh non
 - **Solution**: Ghi lại tên công cụ và từ khóa, sau đó tự nghiên cứu lại sau event
 - **Result**: Có danh sách tài liệu để học tiếp
-- **Lesson**: Khi tham gia event chuyên sâu, cần chuẩn bị trước kiến thức nền hoặc sẵn sàng follow-up sau
+- **Lesson**: Học tiếng anh nhiều lên
 
 ## 💭 Reflection & Insights
 
 ### What went well today?
-- Nắm được blueprint kiến trúc MLOps với SageMaker
-- Có các cụm công cụ hữu ích để ứng dụng vào dự án NLP
-- Được cập nhật nhanh về công nghệ và kỹ thuật mới
+
 
 ### What could be improved?
-- Cần luyện debug tensor & training job từ bây giờ
-- Nên follow livestream lặp lại hoặc lab cụ thể ghi lại chi tiết hơn
+
 
 ### Key Insights
-- Debug-before-ship: dùng Debugger để phát hiện lỗi sớm
-- Giám sát drift: bất kỳ mô hình production nào cũng cần monitoring liên tục
-- SageMaker hỗ trợ full-stack ML lifecycle – từ A đến Z
 
 ### Questions & Curiosities
-- Làm sao tích hợp SageMaker Pipelines vào CI/CD (GitHub Actions, CodePipeline)?
-- Có cách nào dùng Model Monitor để tự động tái-training khi drift?
-- Debug tensor bằng custom rule hay mặc định là đủ?
+
 
 ## 📋 Kế hoạch ngày mai
 
@@ -105,19 +92,19 @@
 - **Reason**: Chủ động thu thập kiến thức chuyên sâu, chuẩn bị kỹ cho project
 
 ### Learning
-- **Score**: 7/10  
+- **Score**: 1/10  
 - **New Knowledge**: SageMaker MLOps, Debugger, Pipelines  
-- **Application**: Có thể áp dụng vào giai đoạn inference monitoring cho dự án
+- **Application**: Chẳng hiểu gì cả
 
 ### Collaboration
-- **Score**: 6/10  
-- **Interactions**: Giao lưu với speaker & tham gia Q/A  
-- **Contributions**: Ghi chép nhiều và đặt câu hỏi thực tế về dự án
+- **Score**: 1/10  
+- **Interactions**: Tham gia event nghe là chính
+- **Contributions**: Không hiểu gì để ghi chép
 
 ### Overall Satisfaction
-- **Score**: 7/10  
-- **Highlights**: Được cập nhật blueprint MLOps hiện đại nhất  
-- **Areas for Growth**: Cần theo lại lab chi tiết để hiểu sâu các bước
+- **Score**: 1/10  
+- **Highlights**: Biết được công nghệ mới, nhưng vẫn không hiểu
+- **Areas for Growth**: Cần cải thiện vấn đề nghe hiểu
 
 ## 📎 Attachments & Links
 
@@ -134,10 +121,10 @@
 ---
 
 **📝 Notes for tomorrow:**  
-- Xem lại phần Debugger video, chuẩn bị lab debug tensor
+
 
 **🎯 Week Progress:**  
-Hoàn thành event nhà cung cấp MLOps – chuẩn bị đủ nền tảng để áp dụng cho workshop Rekognition và inference pipeline trong dự án
+
 
 ---
 *Worklog created by: Lê Thanh Tùng*  

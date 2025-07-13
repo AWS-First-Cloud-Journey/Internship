@@ -1,153 +1,131 @@
-# Worklog - Ngày [DD/MM/YYYY]
+# Worklog - Ngày 02/07/2025
 
 ## 📅 Thông tin cơ bản
-- **Ngày**: [DD/MM/YYYY]
-- **Thứ**: [Thứ trong tuần]
-- **Tuần thực tập**: [Tuần thứ X/8]
-- **Thời gian làm việc**: [8:00 - 17:00]
-- **Mood**: [😊/😐/😔] + [Lý do]
+- **Ngày**: 02/07/2025
+- **Thứ**: Thứ Tư
+- **Tuần thực tập**: Tuần thứ 8/8
+- **Thời gian làm việc**: 8:00 - 11:00
+- **Mood**: 😔 (Lo lắng vì sợ không lấy kịp mộc trước ngày 20/7)
 
 ## 🎯 Mục tiêu ngày hôm nay
-- [ ] Mục tiêu 1: [Cụ thể, đo lường được]
-- [ ] Mục tiêu 2: [Cụ thể, đo lường được]
-- [ ] Mục tiêu 3: [Cụ thể, đo lường được]
+- [x] Viết lại phần Executive Summary cho proposal mới về NLP
+- [x] Xác định lại Problem Statement theo hướng domain-specific
+- [ ] Phác thảo sơ kiến trúc giải pháp tích hợp Comprehend và Transformers
 
 ## 💼 Công việc đã thực hiện
 
-### 1. [Tên công việc 1] ⏱️ [Thời gian]
-- **Mô tả**: [Chi tiết công việc đã làm]
-- **Kết quả**: [Kết quả cụ thể đạt được]
-- **Tools/Tech**: [AWS services, tools, languages sử dụng]
-- **Links**: [GitHub commits, documentation, screenshots]
+### 1. Viết lại Executive Summary ⏱️ 1.5 tiếng
+- **Mô tả**: Viết lại phần mở đầu đề tài dưới góc nhìn tư vấn chiến lược, nhấn mạnh vai trò của NLP nâng cao trong doanh nghiệp.
+- **Kết quả**: Hoàn thành Executive Summary với định hướng đa lĩnh vực, không giới hạn ở thương mại điện tử.
+- **Tools/Tech**: Markdown, Notion
+- **Links**: [Tài liệu học tập](http://f000001.awsstudygroup.com/vi/), [YouTube Study Group](https://www.youtube.com/@AWSStudyGroup)
 
-### 2. [Tên công việc 2] ⏱️ [Thời gian]
-- **Mô tả**: [Chi tiết công việc đã làm]
-- **Kết quả**: [Kết quả cụ thể đạt được]
-- **Tools/Tech**: [AWS services, tools, languages sử dụng]
-- **Links**: [GitHub commits, documentation, screenshots]
+### 2. Viết phần Problem Statement ⏱️ 1.5 tiếng
+- **Mô tả**: Mô tả tình trạng hiện tại, vấn đề sai lệch trong đánh giá khách hàng và hạn chế của hệ thống NLP cũ.
+- **Kết quả**: Hoàn chỉnh Problem Statement với đủ 4 nhóm: Current Situation, Key Challenges, Stakeholder Impact, Business Consequences.
+- **Tools/Tech**: Markdown
+- **Links**: [Tài liệu học tập](http://f000001.awsstudygroup.com/vi/), [YouTube Study Group](https://www.youtube.com/@AWSStudyGroup)
 
 ## 📚 Kiến thức học được
 
 ### 🔧 Technical Skills
-- **AWS Services**: [Services đã tìm hiểu/sử dụng]
-- **Programming**: [Languages, frameworks, libraries]
-- **DevOps**: [Tools, practices, methodologies]
-- **Architecture**: [Patterns, best practices]
+- **AWS Services**: Amazon Comprehend
+- **Programming**: Không sử dụng trong ngày
+- **DevOps**: 
+- **Architecture**: Hiểu khái niệm solution architecture cho NLP serverless
 
 ### 💡 Concepts & Theory
-- **New Concepts**: [Khái niệm mới học được]
-- **Best Practices**: [Best practices áp dụng]
-- **Industry Knowledge**: [Kiến thức ngành, trends]
+- **New Concepts**: Domain-Specific NLP, Feedback Consistency Detection
+- **Best Practices**: Viết problem statement rõ, nhấn mạnh stakeholder impact
+- **Industry Knowledge**: Ứng dụng NLP trong các lĩnh vực khác nhau
 
 ### 🤝 Soft Skills
-- **Communication**: [Presentation, writing, collaboration]
-- **Problem Solving**: [Analytical thinking, debugging]
-- **Time Management**: [Planning, prioritization]
-- **Learning**: [Research skills, self-learning]
+- **Communication**: Diễn giải lại mục tiêu đề tài theo hướng business
+- **Problem Solving**: Tái cấu trúc đề tài để bám sát thực tế
+- **Time Management**: Phân bổ thời gian tốt cho các mục tiêu then chốt
+- **Learning**: Tìm hiểu cấu trúc của một proposal chuẩn FCJ
 
 ## 🚧 Khó khăn và giải pháp
 
-### Vấn đề 1: [Tên vấn đề]
-- **Mô tả**: [Chi tiết vấn đề gặp phải]
-- **Impact**: [Ảnh hưởng đến công việc/học tập]
-- **Root Cause**: [Nguyên nhân gốc rễ]
-- **Solution**: [Cách giải quyết đã áp dụng]
-- **Result**: [Kết quả sau khi giải quyết]
-- **Lesson**: [Bài học rút ra]
-
-### Vấn đề 2: [Tên vấn đề]
-- **Mô tả**: [Chi tiết vấn đề gặp phải]
-- **Impact**: [Ảnh hưởng đến công việc/học tập]
-- **Root Cause**: [Nguyên nhân gốc rễ]
-- **Solution**: [Cách giải quyết đã áp dụng]
-- **Result**: [Kết quả sau khi giải quyết]
-- **Lesson**: [Bài học rút ra]
+### Vấn đề 1: Không xác định rõ phạm vi đề tài ban đầu
+- **Impact**: Gây mất thời gian định hướng lại
+- **Root Cause**: Đề tài cũ về Rekognition không phù hợp năng lực hiện tại
+- **Solution**: Đổi hướng sang đề tài NLP dễ kiểm soát và khả thi hơn
+- **Result**: Có hướng đi rõ ràng, viết lại được phần đầu đề tài
+- **Lesson**: Nên đánh giá sớm năng lực và khó khăn để điều chỉnh
 
 ## 💭 Reflection & Insights
 
 ### What went well today?
-- [Điều gì đã diễn ra tốt]
-- [Thành công nào đạt được]
-- [Kỹ năng nào được cải thiện]
+- Đã viết lại được phần mở đầu và xác định rõ vấn đề cốt lõi
 
 ### What could be improved?
-- [Điều gì có thể làm tốt hơn]
-- [Kỹ năng nào cần phát triển]
-- [Process nào cần tối ưu]
+- Cần xác định nguồn tài liệu tham khảo sớm hơn
 
 ### Key Insights
-- [Insight quan trọng về technical]
-- [Insight về career/industry]
-- [Insight về bản thân]
+- Một proposal tốt cần xuất phát từ insight thật của doanh nghiệp
+- NLP không chỉ áp dụng trong e-commerce mà còn nhiều ngành khác
 
 ### Questions & Curiosities
-- [Câu hỏi cần tìm hiểu thêm]
-- [Chủ đề muốn explore]
-- [Feedback cần từ mentor]
+- Có nên mở rộng thêm phần multilingual testing không?
+- Cách trình bày cost analysis sao cho vừa rõ vừa dễ hiểu?
 
 ## 📋 Kế hoạch ngày mai
 
 ### Priority Tasks
-- [ ] **High**: [Task quan trọng nhất]
-- [ ] **Medium**: [Task quan trọng vừa]
-- [ ] **Low**: [Task có thể hoãn]
+- [ ] **High**: Viết phần Solution Architecture
+- [ ] **Medium**: Liệt kê các AWS services phù hợp
+- [ ] **Low**: Nghiên cứu thêm các case study từ Gartner
 
 ### Learning Goals
-- [ ] [Kiến thức/kỹ năng muốn học]
-- [ ] [Documentation muốn đọc]
-- [ ] [Tutorial muốn follow]
+- [ ] Tìm hiểu kiến trúc serverless NLP
+- [ ] Đọc docs của Comprehend & SageMaker integration
 
 ### Meetings & Deadlines
-- [ ] [Meeting/deadline quan trọng]
-- [ ] [Deliverable cần hoàn thành]
+- [ ] Không có meeting cụ thể
+- [ ] Proposal cần hoàn thành sớm để lấy mộc trước 20/7
 
 ## 📊 Self Assessment
 
 ### Productivity
-- **Score**: [1-10]
-- **Reason**: [Lý do cho điểm này]
-- **Improvement**: [Cách cải thiện]
+- **Score**: 5/10
+- **Reason**: Mất thời gian định hướng lại đề tài
+- **Improvement**: Cần tập trung viết hơn, tránh lan man
 
 ### Learning
-- **Score**: [1-10]
-- **New Knowledge**: [Kiến thức mới học được]
-- **Application**: [Cách áp dụng kiến thức]
+- **Score**: 6/10
+- **New Knowledge**: Tái định hình rõ NLP domain-specific
+- **Application**: Áp dụng ngay vào định hướng nội dung đề tài
 
 ### Collaboration
-- **Score**: [1-10]
-- **Interactions**: [Tương tác với team/mentor]
-- **Contributions**: [Đóng góp cho team]
+- **Score**: 5/10
+- **Interactions**: Tự nghiên cứu là chính
+- **Contributions**: Bước đầu đề xuất hướng đi mới rõ ràng
 
 ### Overall Satisfaction
-- **Score**: [1-10]
-- **Highlights**: [Điểm nổi bật của ngày]
-- **Areas for Growth**: [Lĩnh vực cần phát triển]
+- **Score**: 6/10
+- **Highlights**: Executive Summary rất rõ và chuyên nghiệp
+- **Areas for Growth**: Xác định tài liệu kỹ thuật nhanh hơn
 
 ## 📎 Attachments & Links
 
 ### Code & Projects
-- [GitHub commits](link)
-- [Pull requests](link)
-- [Documentation](link)
+- [ ] 
 
 ### Learning Resources
-- [Articles read](link)
-- [Videos watched](link)
-- [Courses completed](link)
+- [ ] 
 
 ### Screenshots & Demos
-- [AWS Console screenshots]
-- [Application demos]
-- [Architecture diagrams]
+- [ ] 
 
 ---
 
 **📝 Notes for tomorrow:**
-[Ghi chú quan trọng cho ngày mai]
+Tiếp tục viết proposal
 
 **🎯 Week Progress:**
-[Tiến độ so với mục tiêu tuần]
+Đã xác định lại định hướng đề tài, hoàn thành phần mở đầu và mô tả vấn đề
 
 ---
-*Worklog created by: [Tên thực tập sinh]*  
-*Next review: [Ngày review tiếp theo]*
+*Worklog created by: Lê Thanh Tùng*  
+*Next review: 03/07/2025*
