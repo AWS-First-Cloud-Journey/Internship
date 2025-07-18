@@ -2,7 +2,7 @@
 
 ## 📅 Thông tin tổng quan
 - **Tuần thực tập**: Tuần 7
-- **Thời gian làm việc**: 8:00 - 17:00, từ 23/06 đến 27/06
+- **Thời gian làm việc**: 9:00 - 17:00, từ 23/06 đến 27/06
 - **Tổng số ngày làm việc**: 5 ngày
 - **Mood trong tuần**: 😊
 - **Điểm nổi bật**: 
